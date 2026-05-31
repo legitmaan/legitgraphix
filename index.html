@@ -62,11 +62,10 @@
   <h2>Portfolio</h2>
 
   <div class="portfolio">
-    <img src="images/design1.jpg" class="work">
-    <img src="images/design2.jpg" class="work">
-    <img src="images/design3.jpg" class="work">
+    <img src="images/design1.jpg" class="work" onclick="openImage(this)">
+    <img src="images/design2.jpg" class="work" onclick="openImage(this)">
+    <img src="images/design3.jpg" class="work" onclick="openImage(this)">
   </div>
-
 </section>
 
 <!-- CTA -->
@@ -76,20 +75,26 @@
   <a href="https://wa.me/234XXXXXXXXXX" class="btn">Chat on WhatsApp</a>
 </section>
 
-<!-- FLOAT -->
+<!-- FLOAT BUTTON -->
 <a class="float" href="https://wa.me/234XXXXXXXXXX">💬</a>
+
+<!-- IMAGE POPUP -->
+<div id="popup" class="popup" onclick="closeImage()">
+  <img id="popupImg">
+</div>
 
 <footer>
   <p>© 2026 Legit Graphix. All Rights Reserved.</p>
 </footer>
 
-<!-- ANIMATIONS -->
+<!-- ANIMATIONS + POPUP SCRIPT -->
 <script>
 document.documentElement.style.scrollBehavior = "smooth";
 
+/* Scroll animations */
 const sr = ScrollReveal({
   distance: "70px",
-  duration: 1400,
+  duration: 1200,
   delay: 200,
   reset: false
 });
@@ -100,6 +105,16 @@ sr.reveal(".section h2", { origin: "left" });
 sr.reveal(".card", { interval: 120 });
 sr.reveal(".work", { interval: 120 });
 sr.reveal(".cta", { origin: "bottom" });
+
+/* POPUP IMAGE */
+function openImage(img){
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("popupImg").src = img.src;
+}
+
+function closeImage(){
+  document.getElementById("popup").style.display = "none";
+}
 
 /* Parallax */
 window.addEventListener("scroll", () => {
