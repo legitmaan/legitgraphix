@@ -3,38 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Legit Graphix | Design Studio</title>
+  <title>Legit Graphix | Creative Design Studio</title>
+
   <link rel="stylesheet" href="style.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Animation Library -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
+<!-- HERO -->
+<header class="hero">
+  <div class="overlay"></div>
+
+  <nav>
     <h2>Legit Graphix</h2>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-text">
-      <h1>We Design Brands That Stand Out</h1>
-      <p>Logos • Flyers • Posters • Printing • Branding Solutions</p>
-      <a href="#contact" class="btn">Start a Project</a>
-    </div>
-  </header>
+  <div class="hero-content">
+    <h1>We Build Powerful Visual Brands</h1>
+    <p>Logo Design • Flyers • Posters • Branding • Printing</p>
+    <a href="#contact" class="btn">Start Your Project</a>
+  </div>
+</header>
 
-  <!-- STATS -->
-  <section class="stats">
-    <div>🎨 Creative Designs</div>
-    <div>⚡ Fast Delivery</div>
-    <div>💯 High Quality Prints</div>
-  </section>
+<!-- TRUST -->
+<section class="trust">
+  <p>⚡ Fast Delivery</p>
+  <p>🎨 Clean Designs</p>
+  <p>💯 High Quality Prints</p>
+</section>
 
-  <!-- ABOUT -->
-  <section class="section">
-    <h2>About Us</h2>
+<!-- ABOUT -->
+<section class="section">
+  <h2>About Us</h2>
+  <p>
+    Legit Graphix is a creative design studio helping businesses build strong visual identities
+    through modern branding and professional design services.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section class="section dark">
+  <h2>Our Services</h2>
+
+  <div class="grid">
+    <div class="card">Logo Design</div>
+    <div class="card">Flyers & Posters</div>
+    <div class="card">Brand Identity</div>
+    <div class="card">Business Cards</div>
+    <div class="card">Social Media Ads</div>
+    <div class="card">Printing Services</div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section">
+  <h2>Portfolio</h2>
+
+  <div class="portfolio">
+    <div class="work">Design 1</div>
+    <div class="work">Design 2</div>
+    <div class="work">Design 3</div>
+  </div>
+
+  <p class="note">Replace with your real designs later</p>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <h2>Let’s Build Your Brand</h2>
+  <p>Send us a message on WhatsApp to get started</p>
+  <a href="https://wa.me/234XXXXXXXXXX" class="btn">Chat on WhatsApp</a>
+</section>
+
+<!-- FLOAT BUTTON -->
+<a class="float" href="https://wa.me/234XXXXXXXXXX">💬</a>
+
+<footer>
+  <p>© 2026 Legit Graphix. All Rights Reserved.</p>
+</footer>
+
+<!-- ANIMATIONS -->
+<script>
+document.documentElement.style.scrollBehavior = "smooth";
+
+const sr = ScrollReveal({
+  distance: "70px",
+  duration: 1400,
+  delay: 200,
+  reset: false,
+  easing: "cubic-bezier(0.5, 0, 0, 1)"
+});
+
+sr.reveal(".hero-content", { origin: "top", duration: 1600 });
+sr.reveal(".trust p", { interval: 120, origin: "bottom" });
+sr.reveal(".section h2", { origin: "left" });
+sr.reveal(".section p", { origin: "bottom", delay: 200 });
+sr.reveal(".card", { interval: 120, origin: "bottom", scale: 0.9 });
+sr.reveal(".work", { interval: 120, origin: "bottom", scale: 0.85 });
+sr.reveal(".cta", { origin: "bottom" });
+sr.reveal("nav", { origin: "top", distance: "20px" });
+
+/* Typing Effect */
+const text = "We Build Powerful Visual Brands";
+let i = 0;
+
+function type() {
+  const el = document.querySelector(".hero-content h1");
+  if (!el) return;
+
+  el.innerHTML = text.slice(0, i);
+  i++;
+
+  if (i <= text.length) {
+    setTimeout(type, 60);
+  }
+}
+
+window.addEventListener("load", type);
+
+/* Parallax */
+window.addEventListener("scroll", () => {
+  const hero = document.querySelector(".hero");
+  hero.style.backgroundPositionY = window.scrollY * 0.4 + "px";
+});
+</script>
+
+</body>
+</html>    <h2>About Us</h2>
     <p>
       Legit Graphix is a creative design studio focused on helping businesses grow through
       strong visuals, branding identity, and professional printing services.
@@ -69,11 +168,11 @@
   <section class="section dark" id="contact">
     <h2>Let’s Work Together</h2>
     <p>Message us on WhatsApp to start your project</p>
-    <a class="btn" href="https://wa.me/234XXXXXXXXXX">Chat on WhatsApp</a>
+    <a class="btn" href="https://wa.me/2349060052131">Chat on WhatsApp</a>
   </section>
 
   <!-- FLOATING WHATSAPP -->
-  <a class="whatsapp" href="https://wa.me/234XXXXXXXXXX">💬</a>
+  <a class="whatsapp" href="https://wa.me/2349060052131">💬</a>
 
   <footer>
     <p>© 2026 Legit Graphix. All Rights Reserved.</p>
