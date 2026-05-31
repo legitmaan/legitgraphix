@@ -1,19 +1,151 @@
-body {
-  font-family: Arial;
-  margin: 0;
-  background: #f4f4f4;
-  text-align: center;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
 }
 
-header {
-  background: black;
-  color: white;
-  padding: 30px;
+body{
+  background:#0b0b0b;
+  color:white;
 }
 
-section {
-  background: white;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
+/* NAV */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:#111;
+  position:sticky;
+  top:0;
+}
+
+.nav a{
+  color:#00ff99;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  height:80vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:linear-gradient(135deg,#111,#1f1f1f);
+  padding:20px;
+}
+
+.hero h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  color:#bbb;
+  margin-bottom:20px;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  padding:12px 25px;
+  background:#00ff99;
+  color:black;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* STATS */
+.stats{
+  display:flex;
+  justify-content:space-around;
+  padding:20px;
+  background:#111;
+  color:#ccc;
+  font-size:14px;
+}
+
+/* SECTIONS */
+.section{
+  padding:70px 20px;
+  text-align:center;
+}
+
+.section.dark{
+  background:#151515;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
+
+.card{
+  background:#222;
+  padding:20px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.card:hover{
+  background:#00ff99;
+  color:black;
+  transform:translateY(-5px);
+}
+
+/* PORTFOLIO */
+.portfolio{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+.box{
+  width:150px;
+  height:120px;
+  background:#222;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:10px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#00ff99;
+  color:black;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+  font-size:20px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:black;
+  color:#666;
+}
+
+/* SMALL TEXT */
+.small{
+  font-size:12px;
+  color:#777;
+  margin-top:10px;
 }
