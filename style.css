@@ -17,7 +17,7 @@ body{
 /* HERO */
 .hero{
   height:90vh;
-  background:url('https://images.unsplash.com/photo-1522202221466-45c3a3f4c1c1') center/cover;
+  background:url("images/bg.jpg") center/cover no-repeat;
   position:relative;
   display:flex;
   flex-direction:column;
@@ -36,6 +36,10 @@ nav{
   justify-content:space-between;
   padding:20px;
   z-index:2;
+}
+
+nav h2{
+  color:white;
 }
 
 nav a{
@@ -120,7 +124,7 @@ nav a{
   box-shadow:0 10px 25px rgba(0,255,153,0.2);
 }
 
-/* PORTFOLIO */
+/* PORTFOLIO IMAGES */
 .portfolio{
   display:flex;
   justify-content:center;
@@ -130,19 +134,17 @@ nav a{
 }
 
 .work{
-  width:150px;
+  width:160px;
   height:120px;
-  background:#222;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  object-fit:cover;
   border-radius:12px;
   transition:0.4s;
+  cursor:pointer;
 }
 
 .work:hover{
   transform:scale(1.08);
-  box-shadow:0 8px 20px rgba(0,0,0,0.4);
+  box-shadow:0 10px 25px rgba(0,0,0,0.5);
 }
 
 /* CTA */
