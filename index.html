@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Legit Graphix | Creative Design Studio</title>
+  <title>Legit Graphix | Elite Design Studio</title>
 
   <link rel="stylesheet" href="style.css"/>
   <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
+
+<!-- LOADER -->
+<div id="loader">LEGIT GRAPHIX</div>
+
+<!-- FLOATING SHAPES -->
+<div class="shape s1"></div>
+<div class="shape s2"></div>
+<div class="shape s3"></div>
 
 <!-- HERO -->
 <header class="hero">
@@ -20,9 +28,9 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <div class="hero-content">
-    <h1>We Build Powerful Visual Brands</h1>
-    <p>Logo Design • Flyers • Posters • Branding • Printing</p>
+  <div class="hero-content glass">
+    <h1>Elite Visual Branding Studio</h1>
+    <p>We design premium visuals that make brands unforgettable</p>
     <a href="#contact" class="btn">Start Your Project</a>
   </div>
 </header>
@@ -30,30 +38,29 @@
 <!-- TRUST -->
 <section class="trust">
   <p>⚡ Fast Delivery</p>
-  <p>🎨 Clean Designs</p>
-  <p>💯 High Quality Prints</p>
+  <p>🎨 Premium Designs</p>
+  <p>💎 Agency Quality</p>
 </section>
 
 <!-- ABOUT -->
 <section class="section">
   <h2>About Us</h2>
   <p>
-    Legit Graphix is a creative design studio helping businesses build strong visual identities
-    through modern branding and professional design services.
+    We are a creative studio focused on high-end branding, design systems, and visual identity that converts attention into clients.
   </p>
 </section>
 
 <!-- SERVICES -->
 <section class="section dark">
-  <h2>Our Services</h2>
+  <h2>Services</h2>
 
   <div class="grid">
     <div class="card">Logo Design</div>
-    <div class="card">Flyers & Posters</div>
     <div class="card">Brand Identity</div>
-    <div class="card">Business Cards</div>
     <div class="card">Social Media Ads</div>
-    <div class="card">Printing Services</div>
+    <div class="card">Flyers & Posters</div>
+    <div class="card">Business Cards</div>
+    <div class="card">Printing Solutions</div>
   </div>
 </section>
 
@@ -69,44 +76,44 @@
 </section>
 
 <!-- CTA -->
-<section class="cta" id="contact">
-  <h2>Let’s Build Your Brand</h2>
-  <p>Message us on WhatsApp to get started</p>
-  <a href="https://wa.me/2349060052131" class="btn">Chat on WhatsApp</a>
+<section class="cta glass" id="contact">
+  <h2>Let’s Build Something Elite</h2>
+  <p>Message us on WhatsApp to start your project</p>
+  <a href="https://wa.me/234XXXXXXXXXX" class="btn">Chat Now</a>
 </section>
 
-<!-- FLOAT BUTTON -->
-<a class="float" href="https://wa.me/2349060052131">💬</a>
+<!-- FLOAT -->
+<a class="float" href="https://wa.me/234XXXXXXXXXX">💬</a>
 
-<!-- IMAGE POPUP -->
+<!-- POPUP -->
 <div id="popup" class="popup" onclick="closeImage()">
   <img id="popupImg">
 </div>
 
 <footer>
-  <p>© 2026 Legit Graphix. All Rights Reserved.</p>
+  <p>© 2026 Legit Graphix — Elite Creative Studio</p>
 </footer>
 
-<!-- ANIMATIONS + POPUP SCRIPT -->
 <script>
-document.documentElement.style.scrollBehavior = "smooth";
+/* LOADER */
+window.addEventListener("load", () => {
+  document.getElementById("loader").style.display = "none";
+});
 
-/* Scroll animations */
+/* ANIMATION */
 const sr = ScrollReveal({
-  distance: "70px",
+  distance: "80px",
   duration: 1200,
   delay: 200,
   reset: false
 });
 
 sr.reveal(".hero-content", { origin: "top" });
-sr.reveal(".trust p", { interval: 120 });
-sr.reveal(".section h2", { origin: "left" });
 sr.reveal(".card", { interval: 120 });
 sr.reveal(".work", { interval: 120 });
-sr.reveal(".cta", { origin: "bottom" });
+sr.reveal(".section h2", { origin: "left" });
 
-/* POPUP IMAGE */
+/* POPUP */
 function openImage(img){
   document.getElementById("popup").style.display = "flex";
   document.getElementById("popupImg").src = img.src;
@@ -116,7 +123,7 @@ function closeImage(){
   document.getElementById("popup").style.display = "none";
 }
 
-/* Parallax */
+/* PARALLAX */
 window.addEventListener("scroll", () => {
   document.querySelector(".hero").style.backgroundPositionY =
     window.scrollY * 0.4 + "px";
